@@ -60,6 +60,7 @@ def build_app() -> web.Application:
         return web.Response(text="OK")
 
     app.router.add_get("/", healthcheck)
+    app.router.add_get("/healthz", healthcheck)
 
     SimpleRequestHandler(dispatcher=dp, bot=bot).register(app, path=WEBHOOK_PATH)
     setup_application(app, dp, bot=bot)
