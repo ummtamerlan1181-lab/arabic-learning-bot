@@ -10,7 +10,10 @@ from config import config
 
 logger = logging.getLogger(__name__)
 
-_client = genai.Client(api_key=config.GEMINI_API_KEY)
+_client = genai.Client(
+    api_key=config.GEMINI_API_KEY,
+    http_options={"api_version": "v1"},
+)
 
 _MODEL = "gemini-1.5-flash"
 
