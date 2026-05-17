@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 _client = genai.Client(api_key=config.GEMINI_API_KEY)
 
-_MODEL = "gemini-2.0-flash"
+_MODEL = "gemini-1.5-flash"
 
 _SYSTEM = """Ты — преподаватель арабского языка для русскоязычных студентов.
 
