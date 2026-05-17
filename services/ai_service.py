@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 _BASE_URL = (
     "https://generativelanguage.googleapis.com"
-    "/v1beta/models/gemini-pro:generateContent"
+    "/v1beta/models/gemini-2.0-flash-exp:generateContent"
 )
 
 _SYSTEM = """Ты — преподаватель арабского языка для русскоязычных студентов.
