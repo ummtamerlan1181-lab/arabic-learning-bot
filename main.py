@@ -54,11 +54,7 @@ async def on_startup(bot: Bot) -> None:
 
 
 async def on_shutdown(bot: Bot) -> None:
-    try:
-        await bot.delete_webhook()
-        log.info("Webhook deleted")
-    except Exception:
-        log.warning("on_shutdown error: %s", traceback.format_exc())
+    log.info("Bot shutting down (webhook kept alive for redeploy)")
 
 
 def build_app() -> web.Application:
